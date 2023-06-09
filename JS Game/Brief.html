@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Brief</title>
+
+        <!-- Stylesheet -->
+        <link href="style.css" rel="stylesheet">
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sanswer:ital,wght@0,300;0,500;1,100&family=Montserrat:ital,wght@0,400;1,500&family=Raleway:ital,wght@0,300;0,400;0,600;0,800;1,800&display=swap" rel="stylesheet">
+    </head>
+<body>
+
+   <!-- Game's second interaction -->
+    <div class="flexContainer shake">
+      <div class="genericContainer">
+         <h1>Turn the following into an award winning design</h1>
+         <img src="images/client-img.jpg" alt="">  
+         <p class="subheading">I trust this makes sense. I expect the draft by midnight.  Best of luck!</p>
+         <button onclick="openChecklist()" >Begin</button>
+         <button onclick="openClarification()">Ask for clarification</button>
+
+
+         <!-- Checklist -->
+        <div class="checklist" id="checklist">
+
+         <h1>Checklist:</h1>
+
+            <div class="checklistRow">
+               <p>Read client's mind</p>
+               <label>
+                  <input type="checkbox" name="checkbox" onclick="showMe()">
+                  <span></span>
+               </label>
+            </div>
+
+            <div class="checklistRow">
+               <p>Brew potion (coffee)</p>
+               <label>
+                  <input type="checkbox"  name="checkbox" onclick="showMe()">
+                  <span></span>
+               </label>
+            </div>
+
+            <div class="checklistRow">
+               <p>Press the "make it look good" button</p>
+               <label>
+                  <input type="checkbox"  name="checkbox" onclick="showMe()">
+                  <span></span>
+               </label>
+            </div>
+
+            <div class="checklistRow">
+               <p>Spiral into a state of confusion</p>
+               <label>
+                  <input type="checkbox"  name="checkbox" onclick="showMe()">
+                  <span></span>
+               </label>
+            </div>
+
+            <div class="checklistRow">
+               <p>Bend the laws of time to finish work within the deadline</p>
+               <label>
+                  <input type="checkbox"  name="checkbox" onclick="showMe()">
+                  <span></span>
+               </label>
+            </div>
+
+            <a href="Work.html" id="viewWorkButton" class="viewWorkHidden"><button>View design</button></a>
+            
+        </div> 
+
+        <!-- Clarification popup -->
+
+   <div class="popup" id="clarification">
+      <h2>Your boss is busy</h2>
+      <p>You receive no response</p>
+      <button onclick="closeClarification()">Okay</button>
+  </div> 
+
+   </div>
+</div>
+
+  <!-- Javascript -->
+  <script src="script.js"></script>
+
+</body>
+</html>

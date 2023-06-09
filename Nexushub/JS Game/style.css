@@ -1,0 +1,382 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+/* General layout */
+
+html{
+    background: #d6dcfd;
+}
+
+p{
+    margin: 10px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    max-width: 100%;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 100px;
+    margin-right: 100px; 
+    margin-top: 50px;
+}
+
+.columnCard{
+    border-radius: 20px;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+    filter: drop-shadow(7px 12px 5px rgba(75, 75, 75, 0.49));
+    width: 500px; 
+}
+
+.columnCard:hover{
+    transform: scale(1.05);
+    transition: transform 0.5s, filter 0.5s;
+}
+
+.textContent{
+    padding: 10px;
+    margin: 20px;
+    width: 450px;
+}
+
+ul{
+    padding-left: 40px;
+    line-height: 22px;
+}
+
+
+.subheading{
+    font-weight: 700;
+}
+
+.flexContainer{
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        align-items: flex-start;
+        gap: 20px;
+        justify-content: center;
+}
+
+.pageHeading{
+    width: 100%;
+    justify-content: center;
+    display:flex;
+    font-size: 70px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.genericContainer{
+    padding: 30px 10px;
+    border-radius: 20px;
+    border: 2px solid rgb(0, 0, 0);
+    background: rgb(230, 232, 236);
+    margin-top: 20px;
+    filter: drop-shadow(7px 12px 5px rgba(75, 75, 75, 0.49));
+    width: 500px; 
+    justify-content: center;
+     text-align: center;
+}
+
+button{
+    width: 335px;
+    margin-top: 25px;
+    padding: 10px 0;
+    background: #222222;
+    color: white;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+/* Intro message */
+
+.contextMessage{
+    position: absolute;
+    top: 25%;
+    right: 36.5%;
+    z-index: 3;
+    background-color: white;
+}
+
+.contextMessage h1{
+    font-size: 50px;
+    padding-bottom: 20px;
+    font-weight: 700;
+    color: rgb(108, 139, 241);
+}
+
+.contextCanvas{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.473);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 110%;
+    z-index: 5;
+}
+
+/* POPUP */
+
+.popup{
+    width: 400px;
+    background: rgb(230, 232, 236);
+    border-radius: 20px;
+    border: 2px solid rgb(0, 0, 0);
+    filter: drop-shadow(7px 12px 5px rgba(75, 75, 75, 0.49));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    z-index: 2;
+}
+
+.openPopup{
+    visibility: visible;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+#popup3{
+  top: 100%;
+}
+
+#popup4{
+    top: 100%;
+  }
+
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin:30px 0 10px;
+}
+
+/* Brief */
+.shake {
+    animation: shake 150ms 2 linear;
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translate(3px, 0) rotate(-2deg);
+    }
+    50% {
+      transform: translate(-3px, 0) rotate(2deg) scale(1.05);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+
+/* IMG */
+
+img{
+    width: 100%;
+    padding: 20px;
+}
+
+/* Checklist */
+
+.checklist{
+    width: 400px;
+    background: rgb(230, 232, 236);
+    border-radius: 20px;
+    border: 2px solid rgb(0, 0, 0);
+    filter: drop-shadow(7px 12px 5px rgba(75, 75, 75, 0.49));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    z-index: 1;
+    padding: 10px;
+}
+
+.openChecklist{
+    visibility: visible;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.openChecklist h1{
+    font-size: 50px;
+    padding-top: 10px;
+}
+
+.checklistRow{
+    display:flex ;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px 0;
+    padding-right: 30px;
+}
+
+.checklistRow p{
+    font-weight: 700;
+    width: 70%;
+    text-align: left;
+}
+
+.checklistRow label{
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+.checklistRow input{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+}
+
+label span{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+label span::after{
+  content: '';
+  position: absolute;
+  left: 8px;
+  bottom: 10px;
+  width: 0px;
+  height: 0px;
+  border: solid rgb(108, 139, 241);
+  border-radius: 3px;
+  border-width: 0 6px 6px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: width 0.5s, height 0.5s, opacity 0.5s;
+}
+
+input:checked ~ span:after{
+  width: 20px;
+  height: 40px;
+  opacity: 1;
+}
+
+.viewWorkHidden{
+    visibility: hidden; 
+}
+
+.showWork{
+    visibility: visible;
+}
+
+/* WORK */
+
+#blue{
+    filter: hue-rotate(137deg);
+}
+
+#red{
+    filter: hue-rotate(299deg) saturate(5.5);
+}
+
+.selectedDesign{
+    transform: scale(1.05);
+    transition: transform 0.5s, filter 0.5s;
+    z-index: 1;
+}
+
+
+#designOptions{
+    padding-bottom: 50px;
+}
+
+/* End screen fade out */
+
+.blackFade{
+    position: absolute;
+    background-color: black;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    animation: fadeOut 5s;
+    visibility: hidden;
+}
+
+.blackFadeVisible{
+    visibility: visible;
+}
+
+.endText{
+    color: rgb(255, 255, 255);
+    animation: fadeIn 10s;
+    visibility: hidden;
+    top: 40%;
+    left: 40%;
+    position: absolute;
+    text-align: center;
+}
+
+.endTextVisible{
+    visibility: visible;
+}
+
+#fadeIn{
+    position: absolute;
+}
+
+@keyframes fadeOut {
+    0% {
+      opacity: 0%;
+    }
+    30% {
+        opacity: 0%;
+      }
+    100% {
+     opacity: 400%;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0%;
+    }
+    50% {
+        opacity: 0%;
+      }
+    100% {
+     opacity: 400%;
+    }
+  }

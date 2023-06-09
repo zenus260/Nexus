@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Available jobs</title>
+
+        <!-- Stylesheet -->
+        <link href="style.css" rel="stylesheet">
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sanswer:ital,wght@0,300;0,500;1,100&family=Montserrat:ital,wght@0,400;1,500&family=Raleway:ital,wght@0,300;0,400;0,600;0,800;1,800&display=swap" rel="stylesheet">
+    </head>
+<body>
+
+    <!-- Game welcome screen -->
+
+    <div class="flexContainer">
+
+    <!-- intro message -->
+    
+<div class="contextCanvas" id="context">
+    <div class="genericContainer contextMessage" id="contextMessage" >
+    <h1>Welcome to my game!</h1>
+    <p class="subheading">In this game, you are a fresh new designer looking for your first job. </p> <p class="subheading">Unfortunately the job market is rather screwy and you have to navigate the challenges that come with being a designer (albeit in a humorous manner).</p>
+    <br>
+    <p> <span class="subheading"> P.S. </span> I know this game is rather word heavy but reading the descriptions is well worth it. </p>
+    <button onclick="closeContext()">Begin</button>
+</div> 
+</div>
+
+<!-- Game's first interaction:job selection -->
+
+    <H1 class="pageHeading">Design jobs available</H1>
+
+    <!-- Job listing 1 -->
+    <a onclick="openPopup()">
+        <div class="columnCard">
+            <div class="textContent">
+            <h1>Entry level position</h1>
+            <p> <i>At Bullcarp Inc</i></p>
+            <p class="subheading">You will be responsible for designing the following:</p>
+            <p>
+                <ul>
+                   <li>Websites</li>
+                   <li>Social media strategy</li>
+                   <li>Print media</li>
+                   <li>Video and motion graphics</li>
+                   <li>Interior design</li>
+                   <li>Industrial design</li>
+                   <li>Fashion design</li>
+                   <li>AI</li>
+                   <li>Everything under the sun</li>
+                </ul>
+             </p>
+             <p class="subheading">Minimum qualifications:</p>
+             <p>
+                <ul>
+                   <li>5 years of full stack experience</li>
+                   <li>3 years as a NASA engineer</li>
+                   <li>2 years of neurosurgery experience</li>
+                   <li>Woodworking</li>
+                   <li>Must be great with children</li>
+                   <li>Able to lift 400kg</li>
+                   <li>Experience white water rafting</li>
+                </ul>
+             </p>
+        
+             <p class="subheading">Salary</p>
+             <p class="subheading">R500 per month</p>
+            </div>
+           </div> 
+      </a>
+
+        <!-- Popup -->
+        <div class="popup" id="popup">
+            <h2>Sorry, you don't meet the requirements.</h2>
+            <p>(You fail to find a job and starve 😵)</p>
+            <button onclick="closePopup()">Try again</button>
+        </div>
+
+<!-- Job listing 2 -->
+
+        <a  onclick="openPopup1()">
+    <div class="columnCard">
+        <div class="textContent">
+        <h1>Digital Designer</h1>
+        <p><i>At The_only_possible_option</i></p>
+        <p >Are you a designer with a flair for the extraordinary? Do you possess superhuman creativity and an uncanny ability to bend the laws of design? Well, do we have a job for you! We're seeking a designer who can swim through a sea of pixels, and summon colors from thin air. Yes, we're looking for a superhero in disguise, a designer with ludicrous abilities!</p>
+        <p class="subheading">Requirements</p>
+        <p>
+            <ul>
+            <li> <span class="subheading"> Mind-Reading Mastery:</span> As a designer extraordinaire, you must be able to read clients' minds and extract their deepest design desires. If they're thinking, "I want a logo that combines a chicken and a rocket ship," you should already be sketching one in your mind!</li>
+            <li> <span class="subheading">Time Travel Experience:</span> We need a designer who can turn back time and meet deadlines before they even exist. If you can deliver designs yesterday, you're our hero!</li>
+            <li> <span class="subheading">Shape-Shifting Skills:</span>S Are you able to transform into any designer we require? From a mighty Photoshop warrior to an invincible Illustrator wizard, your shape-shifting abilities should be unparalleled.</li>
+            <li> <span class="subheading">Telepathic Typography:</span> You must possess the power to communicate through telepathic typography. Your fonts should whisper enchanting tales and captivate audiences with their mesmerizing curves.</li>
+            <li> <span class="subheading">Levitation Proficiency:</span> We're seeking a designer who can levitate above the limits of average creativity. Your ideas should soar higher than the highest mountains and defy gravity with their sheer brilliance.</li>
+            <li> <span class="subheading">Potion Brewing:</span> Proficiency in mixing design potions is a must. From the "Perfect Palette Elixir" to the "Pixel-Precise Potion," your potions should have the power to transform ordinary projects into extraordinary masterpieces.</li>
+            </ul>
+        </p>
+
+        <p class="subheading">Salary</p>
+        <p class="subheading">R20 000 per month</p>
+        </div>
+    </div> 
+        </a>
+
+        <!-- Popup -->
+    <div class="popup" id="popup1">
+        <h2>Congratulations!</h2>
+        <p>You got the position!</p>
+        <a href="Brief.html"><button>  View brief</button></a>
+        <button onclick="closePopup1()">View other options</button>
+    </div> 
+
+    <!-- Job listing 3 -->
+    <a onclick="openPopup2()">
+    <div class="columnCard">
+        <div class="textContent">
+        <h1>Designer artist person</h1>
+        <p><i>At Definitely_not_a_sketchy_company</i></p>
+        <p>We is search for a fancy designer to help us make beautiful things. You good with computer and creative mind? We need you! You have skills for make things look nice, like logos, posters, websites, and other stuff? Great!</p>
+        <p class="subheading">Minimum qualifications:</p>
+        <p>
+            <ul>
+            <li> </li>
+            </ul>
+        </p>
+
+        <p class="subheading">Salary</p>
+        <p class="subheading">Exposure</p>
+        </div>
+    </div> 
+
+    </div>
+    </a>
+
+    <!-- Popup -->
+    <div class="popup" id="popup2">
+        <h2>Sorry, the company has strangely gone bankrupt.</h2>
+        <p>(You fail to find a job and starve 😵)</p>
+        <button onclick="closePopup2()">Try again</button>
+    </div>
+
+  <!-- Javascript -->
+  <script src="script.js"></script>
+
+</body>
+</html>

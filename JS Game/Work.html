@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Work</title>
+
+        <!-- Stylesheet -->
+        <link href="style.css" rel="stylesheet">
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sanswer:ital,wght@0,300;0,500;1,100&family=Montserrat:ital,wght@0,400;1,500&family=Raleway:ital,wght@0,300;0,400;0,600;0,800;1,800&display=swap" rel="stylesheet">
+    </head>
+<body>
+
+  <!-- Game's third interaction -->
+  <h1 class="pageHeading">Select version to send</h1>
+
+  <!-- Design options -->
+
+    <div class="flexContainer" id="designOptions">
+      
+      <a class="columnCard" id="Blue" onclick="selectDesignA(1)">
+         
+         <img src="images/design.jpg" id="blue" alt="">
+
+   </a>
+
+   <a class="columnCard" id="Yellow" onclick="selectDesignB(2)">
+         
+    <img src="images/design.jpg" id="yellow" alt="">
+
+</a>
+
+<div class="columnCard" id="Red" onclick="selectDesignC(3)">
+         
+  <img src="images/design.jpg" id="red" alt="">  
+
+</div>
+</div>
+
+<h1 class="pageHeading">Select rationale</h1>
+
+
+<!-- Rationale options-->
+
+<div class="flexContainer">
+      
+  <a class="columnCard designOptions" id="blueRationale" onclick="selectRationaleA()">
+     <div class="textContent">
+     <p class="subheading">Why I chose blue</p>
+     <ul>
+      <li>It's the Color of Enlightenment: Blue, the color of the sky and the vast ocean, is believed to hold the secret to enlightenment. By drenching the design in blue, I hope to elevate users' consciousness to a state of sheer awe and realization. Who knew a color could be so enlightening? </li>
+      <li>Blue's Anti-Gravity Properties: Did you know that blue has anti-gravity properties? Well, I just made that up, but imagine if it were true! This design defies gravity and floats effortlessly in the digital realm. Users will be amazed as they witness the levitating wonder of our blue-infused creation.</li>
+     </ul>
+    </div>
+</a>
+
+<a class="columnCard" id="yellowRationale" onclick="selectRationaleB()">
+  <div class="textContent">
+  <p class="subheading">Why I chose yellow</p>
+  <ul>
+   <li>Yellow is associated with energy and enthusiasm. Our designs will burst onto the scene like a hyperactive squirrel on a caffeine high, infusing every project with an unstoppable zest for life.</li>
+   <li>Yellow is the color of sunshine and happiness. I chose yellow because I believe that life is too short to be anything but cheerful, and our designs are here to spread some sunshine.</li>
+  </ul>
+ </div>
+</a>
+
+<a class="columnCard" id="redRationale" onclick="selectRationaleC()">
+  <div class="textContent">
+  <p class="subheading">Why I chose red</p>
+  <ul>
+   <li>Red is the color of passion, like a steamy telenovela or a salsa dance party. We want our designs to set hearts ablaze and ignite a fiery passion within our viewers.</li>
+   <li>Red is not just a color; it's a state of mind. I chose red because who doesn't love a color that screams, "Look at me, I'm on fire!" I believe in making a statement that tickles the funny bone and leaves people scratching their heads in delightful confusion.</li>
+   <li>Furthermore, red is the color of adventure and daring. With red as our sidekick, we'll fearlessly break design rules and ride unicycles on tightropes of artistic brilliance. It's like having a design that shouts, "Hold my paintbrush, and watch this!"</li>
+  </ul>
+ </div>
+</a>
+
+<!-- Popup messages/feedback -->
+
+<div class="popup" id="popup3">
+  <h2>Your design and rationale do not match!</h2>
+  <p>(Your boss is disappointed by your sloppy work)</p>
+  <button onclick="closePopup3()">Try again</button>
+</div>
+
+<div class="popup" id="popup4">
+  <h2>New message from client!</h2>
+  <a href="Message.html"><button>  View message</button></a>
+</div>
+
+
+<button id="checkSameBtn">Submit</button>
+</div>
+
+  <!-- Javascript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
