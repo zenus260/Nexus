@@ -1,1 +1,3 @@
 media: files
+fields:
+  - {ProjectName: title, description: rich-text,type: string, roles: string}
