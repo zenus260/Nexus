@@ -1,3 +1,8 @@
-media: files
-fields:
-  - {ProjectName: title, description: rich-text,type: string, roles: string}
+content: 
+  - name: Projects
+    path: files
+    type: collection
+    fields: 
+      - {name: title, type: string}
+      -  {name: Description, type: rich-text}
+      -  {name: Roles, type: string}
