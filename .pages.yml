@@ -4,5 +4,9 @@ content:
     type: collection
     fields: 
       - {name: title, type: string}
-      -  {name: Description, type: rich-text}
-      -  {name: Roles, type: string}
+      - {name: Description, type: string}
+      - {name: Roles, type: string}
+      - {name: Client, type: string}
+      - {name: Project_Details, type: rich-text}
+      - {name: Project_link, type: rich-text}
+      - {name: Images, type: image}
