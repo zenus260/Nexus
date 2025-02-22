@@ -9,14 +9,9 @@ content:
       - {name: Client, type: string}
       - {name: Project_Details, type: rich-text}
       - {name: Project_link, type: rich-text}
-      - {name: Images, type: image, path: HamzaPatel/images}
-    media:
-      - name: images
-        label: Images
-        path: HamzaPatel/images
-        type: collection
-        accept: true
-      - image/*
+      - {name: Images, type: image, media: images}
+
+media: HamzaPatel/images
 
 
 
