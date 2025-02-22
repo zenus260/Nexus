@@ -14,7 +14,7 @@ content:
   - name: images
     label: Images
     path: HamzaPatel/images
-    type: file
+    type: collection
     accept:
       - image/*
 
