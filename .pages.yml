@@ -10,4 +10,14 @@ content:
       - {name: Project_Details, type: rich-text}
       - {name: Project_link, type: rich-text}
       - {name: Images, type: image}
-      - {name: cover, label: Cover, type: image, list: true, options: path: src/media/screenshots, extensions: [ jpg, jpeg, png ]}
+
+
+media: input
+media:
+- name: cover
+  label: Cover
+  type: image
+  list: true
+  options:
+    path: HamzaPatel/images
+    extensions: [ jpg, jpeg, png ]
