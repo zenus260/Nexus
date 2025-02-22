@@ -16,6 +16,6 @@ content:
     type: collection
     fields:
       - {name: title, type: string}
-      - {name: images, type: image, items: {type: image, media: images}}
+      - {name: images, type: collection, items: {type: image, media: images}}
 
 media: HamzaPatel/images
