@@ -1,4 +1,4 @@
-content: 
+content:
   - name: Projects
     path: files
     type: collection
@@ -9,13 +9,13 @@ content:
       - {name: Client, type: string}
       - {name: Project_Details, type: rich-text}
       - {name: Project_link, type: rich-text}
-      - {name: Images, type: image, media: images}
+      - {name: Images, type: list, items: {type: image, media: images}}
 
   - name: Gallery
     path: gallery
     type: collection
     fields:
       - {name: title, type: string}
-      - {name: images, type: collection, items: {type: image, media: images}}
+      - {name: images, type: list, items: {type: image, media: images}}
 
 media: HamzaPatel/images
