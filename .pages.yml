@@ -1,6 +1,6 @@
 content: 
   - name: Projects
-    path: HamzaPatel/images
+    path: files
     type: collection
     fields: 
       - {name: title, type: string}
@@ -11,6 +11,13 @@ content:
       - {name: Project_link, type: rich-text}
       - {name: Images, type: image}
     media:
+      - name: images
+        label: Images
+        path: HamzaPatel/images
+        type: collection
+        accept: true
+      - image/*
+
 
 
 
