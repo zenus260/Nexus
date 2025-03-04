@@ -11593,6 +11593,33 @@ __p+='`),
   });
 })();
 
+document.addEventListener("DOMContentLoaded", function () {
+  const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+  accordionHeaders.forEach((header) => {
+    header.addEventListener("click", () => {
+      // Close all other open sections
+      accordionHeaders.forEach((otherHeader) => {
+        if (otherHeader !== header) {
+          otherHeader.classList.remove("active");
+          const otherContent = otherHeader.nextElementSibling;
+          otherContent.style.maxHeight = null;
+        }
+      });
+
+      // Toggle current section
+      header.classList.toggle("active");
+      const content = header.nextElementSibling;
+
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  });
+});
+
 /*!
  * tram.js v0.8.2-global
  * Cross-browser CSS3 transitions in JavaScript
