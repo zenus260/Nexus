@@ -416,6 +416,10 @@ pre.w-code-block code {
   display: inline-block !important;
 }
 
+.highlight {
+  color: var(--brand-colour-purple);
+}
+
 h1,
 h2,
 h3,
@@ -1943,9 +1947,16 @@ textarea.w-select {
 
 .w-nav-brand {
   float: left;
-  color: #333;
+  color: #ffffff;
   text-decoration: none;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -1.2px;
   position: relative;
+}
+
+.w-nav-brand:hover {
+  color: var(--brand-colour-purple);
 }
 
 .w-nav-link {
@@ -2950,7 +2961,6 @@ a {
   margin-left: auto;
   margin-right: auto;
   font-family: Lexend, sans-serif;
-  font-family: Lexend, sans-serif;
   font-size: 140px;
   font-weight: 500;
   line-height: 120px;
@@ -3080,10 +3090,11 @@ a {
 }
 
 .hero-secondary {
-  letter-spacing: 9px;
+  /* letter-spacing: 9px; */
   margin-top: 0;
   font-family: Lexend, sans-serif;
-  font-weight: 200;
+  /* letter-spacing: 24px; */
+  font-weight: 300;
 }
 
 .body {
