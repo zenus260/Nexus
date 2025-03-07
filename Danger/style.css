@@ -149,7 +149,7 @@ h2 {
   font-size: 50px;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 700;
-  padding: 10px;
+  padding: 20px 0px;
 }
 
 p {
@@ -187,15 +187,18 @@ aside {
 .aboutTextBox {
   width: 600px;
   padding: 20px;
+  padding-top: 25;
   font-family: "Josefin Sans", sans-serif;
   line-height: 25px;
-  border: 5px solid white;
+  /* border: 1px solid white; */
+  border: 1px solid rgb(255 255 255 / 28%);
   border-radius: 12px;
-  box-shadow: 0 0px 14px 0 rgb(255, 255, 255);
+  /* box-shadow: 0 0px 14px 0 rgb(255, 255, 255); */
   margin: 0 20px;
   background-color: rgb(0, 0, 0, 0.8);
   /* display: inline-block; */
   text-align: left;
+  backdrop-filter: blur(10px);
 }
 
 .aboutVideo {
@@ -211,9 +214,10 @@ aside {
   margin: 0 20px;
   width: 600px;
   height: 345px;
-  border: 5px solid white;
+  /* border: 1px solid white; */
+  border: 1px solid rgb(255 255 255 / 28%);
   border-radius: 12px;
-  box-shadow: 0 0px 14px 0 rgb(255, 255, 255);
+  /* box-shadow: 0 0px 14px 0 rgb(255, 255, 255); */
   /* display: inline-block; */
 }
 
@@ -244,7 +248,9 @@ form {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
   background: rgb(0, 0, 0, 0.6);
   border: 2px solid white;
+  border: 1px solid rgb(255 255 255 / 28%);
   display: inline-block;
+  backdrop-filter: blur(30px);
 }
 .form-group {
   margin-bottom: 16px;
@@ -482,6 +488,8 @@ input[type="surname"] {
   display: inline-block;
   line-height: 25px;
   font-family: "Josefin Sans", sans-serif;
+  border: 2px solid rgb(255 255 255 / 58%);
+  backdrop-filter: blur(10px);
 }
 
 .map {
@@ -504,13 +512,14 @@ input[type="surname"] {
   width: 300px;
   padding: 24px;
   margin: 50px 20px;
-  border: 5px solid white;
   border-radius: 5px;
   background: rgb(0, 0, 0, 0.6);
-  border: 2px solid white;
+  /* border: 2px solid white; */
+  border: 1px solid rgb(255 255 255 / 28%);
   display: inline-block;
   line-height: 25px;
   font-family: "Josefin Sans", sans-serif;
+  backdrop-filter: blur(10px);
 }
 
 .contactTextBox p {
