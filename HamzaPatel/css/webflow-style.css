@@ -880,6 +880,21 @@ textarea.w-select {
   position: fixed;
   z-index: 20;
   margin-left: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.toggle-btn {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+  background-color: var(--brand-colour-purple);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 991px) {
@@ -1018,6 +1033,40 @@ textarea.w-select {
 
   .w-col-small-12 {
     width: 100%;
+  }
+
+  .outliner-sticky {
+    transform: translateX(-105%);
+    background-color: var(--Background-primary);
+    padding: 20px;
+    margin-left: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px;
+  }
+
+  .outliner-sticky.active {
+    transform: translateX(0);
+  }
+
+  .outliner-sticky .outliner {
+    transform: translateX(0); /* Ensure it moves with parent */
+    opacity: 1;
+    width: 100%; /* Full width of parent */
+    max-width: 100%;
+    padding-top: 20px;
+  }
+
+  .outliner-sticky:not(.active) .outliner {
+    opacity: 0;
+  }
+
+  .toggle-sidebar-btn {
+    display: block;
+  }
+
+  .outliner {
+    padding-top: 20px;
   }
 }
 
@@ -3372,6 +3421,21 @@ a {
   margin-top: 6px;
 }
 
+.toggle-sidebar-btn {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 30; /* Higher than outliner-sticky */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
 .image-container img {
   /* margin: 10px 0px; */
 }
@@ -3783,6 +3847,14 @@ a {
 
   .hero-secondary {
     letter-spacing: 8px;
+  }
+
+  .toggle-btn {
+    display: block;
+  }
+
+  .project-contents {
+    padding-left: 0px;
   }
 }
 

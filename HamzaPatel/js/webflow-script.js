@@ -11620,6 +11620,33 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Collapse sidebar on mobile
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Add event listener for the toggle button
+  document
+    .getElementById("toggleSidebar")
+    .addEventListener("click", function () {
+      document.getElementById("outlinersticky").classList.toggle("active");
+    });
+
+  // Close sidebar when clicking outside
+  document.addEventListener("click", function (event) {
+    const sidebar = document.getElementById("outlinersticky");
+    const toggleBtn = document.getElementById("toggleSidebar");
+
+    if (window.innerWidth <= 768) {
+      if (
+        !sidebar.contains(event.target) &&
+        !toggleBtn.contains(event.target) &&
+        sidebar.classList.contains("active")
+      ) {
+        sidebar.classList.remove("active");
+      }
+    }
+  });
+});
+
 /*!
  * tram.js v0.8.2-global
  * Cross-browser CSS3 transitions in JavaScript
