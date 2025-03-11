@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio with Category Filter</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      /* body {
+        background-color: #f5f5f5;
+        padding: 2rem;
+      } */
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: #333;
+      }
+
+      .filter-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .filter-btn {
+        padding: 0.5rem 1rem;
+        background-color: #e0e0e0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+      }
+
+      .filter-btn:hover {
+        background-color: #d0d0d0;
+      }
+
+      .filter-btn.active {
+        background-color: #333;
+        color: white;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+
+      .project-card {
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .project-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .project-info {
+        padding: 1.5rem;
+      }
+
+      .project-info h3 {
+        margin-bottom: 0.5rem;
+        color: #333;
+      }
+
+      .project-info p {
+        color: #666;
+        margin-bottom: 1rem;
+      }
+
+      .project-categories {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .category-tag {
+        font-size: 0.8rem;
+        padding: 0.25rem 0.5rem;
+        background-color: #f0f0f0;
+        border-radius: 4px;
+        color: #555;
+      }
+
+      .hide-project {
+        display: none;
+      }
+
+      /* Animation for filtering */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fadeIn {
+        animation: fadeIn 0.5s ease forwards;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="secondary-heading">
+        All projects (section under construction)
+      </h2>
+
+      <!-- Filter Buttons -->
+      <div class="filter-container">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ux">UX Design</button>
+        <button class="filter-btn" data-filter="code">Code</button>
+        <button class="filter-btn" data-filter="3d">3D</button>
+        <button class="filter-btn" data-filter="video">Video</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card" data-categories="ux code">
+          <img src="/api/placeholder/600/400" alt="Project 1" />
+          <div class="project-info">
+            <h3>E-commerce Redesign</h3>
+            <p>
+              A complete redesign of an e-commerce platform with improved user
+              experience.
+            </p>
+            <div class="project-categories">
+              <span class="category-tag">UX Design</span>
+              <span class="category-tag">Code</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" data-categories="3d video">
+          <img src="/api/placeholder/600/400" alt="Project 2" />
+          <div class="project-info">
+            <h3>3D Product Animation</h3>
+            <p>
+              Animated product showcase using 3D modeling and video editing.
+            </p>
+            <div class="project-categories">
+              <span class="category-tag">3D</span>
+              <span class="category-tag">Video</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" data-categories="code">
+          <img src="/api/placeholder/600/400" alt="Project 3" />
+          <div class="project-info">
+            <h3>JavaScript Game</h3>
+            <p>A browser-based game built with vanilla JavaScript.</p>
+            <div class="project-categories">
+              <span class="category-tag">Code</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card" data-categories="ux">
+          <img src="/api/placeholder/600/400" alt="Project 4" />
+          <div class="project-info">
+            <h3>Mobile App UX Design</h3>
+            <p>
+              User experience design for a fitness tracking mobile application.
+            </p>
+            <div class="project-categories">
+              <span class="category-tag">UX Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card" data-categories="3d ux">
+          <img src="/api/placeholder/600/400" alt="Project 5" />
+          <div class="project-info">
+            <h3>3D Interface Prototype</h3>
+            <p>Exploring 3D interfaces for improved user interaction.</p>
+            <div class="project-categories">
+              <span class="category-tag">3D</span>
+              <span class="category-tag">UX Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card" data-categories="video code">
+          <img src="/api/placeholder/600/400" alt="Project 6" />
+          <div class="project-info">
+            <h3>Video Editing Tool</h3>
+            <p>A web-based video editing tool built with modern frameworks.</p>
+            <div class="project-categories">
+              <span class="category-tag">Video</span>
+              <span class="category-tag">Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const projectCards = document.querySelectorAll(".project-card");
+
+        // Add click event to filter buttons
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            // Remove active class from all buttons
+            filterButtons.forEach((btn) => btn.classList.remove("active"));
+
+            // Add active class to clicked button
+            this.classList.add("active");
+
+            // Get filter value
+            const filterValue = this.getAttribute("data-filter");
+
+            // Filter projects
+            projectCards.forEach((card) => {
+              card.classList.remove("fadeIn");
+
+              if (filterValue === "all") {
+                card.classList.remove("hide-project");
+                setTimeout(() => {
+                  card.classList.add("fadeIn");
+                }, 10);
+              } else {
+                const categories = card.getAttribute("data-categories");
+
+                if (categories.includes(filterValue)) {
+                  card.classList.remove("hide-project");
+                  setTimeout(() => {
+                    card.classList.add("fadeIn");
+                  }, 10);
+                } else {
+                  card.classList.add("hide-project");
+                }
+              }
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

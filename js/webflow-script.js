@@ -11647,6 +11647,50 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// filter attempt 2
+
+document.addEventListener("DOMContentLoaded", function () {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const projectCards = document.querySelectorAll(".project-card");
+
+  // Add click event to filter buttons
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      // Remove active class from all buttons
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+
+      // Add active class to clicked button
+      this.classList.add("active");
+
+      // Get filter value
+      const filterValue = this.getAttribute("data-filter");
+
+      // Filter projects
+      projectCards.forEach((card) => {
+        card.classList.remove("fadeIn");
+
+        if (filterValue === "all") {
+          card.classList.remove("hide-project");
+          setTimeout(() => {
+            card.classList.add("fadeIn");
+          }, 10);
+        } else {
+          const categories = card.getAttribute("data-categories");
+
+          if (categories.includes(filterValue)) {
+            card.classList.remove("hide-project");
+            setTimeout(() => {
+              card.classList.add("fadeIn");
+            }, 10);
+          } else {
+            card.classList.add("hide-project");
+          }
+        }
+      });
+    });
+  });
+});
+
 /*!
  * tram.js v0.8.2-global
  * Cross-browser CSS3 transitions in JavaScript

@@ -75,8 +75,9 @@
           ><div class="">HP</div></a
         >
         <nav role="navigation" class="nav-menu w-nav-menu">
-          <a href="#Projects" class="nav-link w-nav-link">Work</a
-          ><a href="about.html" class="nav-link w-nav-link">About</a
+          <a href="#Projects" class="nav-link w-nav-link">Case studies</a
+          ><a href="#All" class="nav-link w-nav-link">All work</a
+            ><a href="about.html" class="nav-link w-nav-link">About</a
           ><a href="mailto:zenus260@gmail.com" class="nav-link w-nav-link">Contact</a>
         </nav>
         <div class="menu-button w-nav-button">
@@ -212,7 +213,7 @@
     </section> -->
     <aside id="Projects" class="section">
       <div class="w-layout-blockcontainer container image-3 w-container">
-        <h2 class="secondary-heading">Here are some of my projects:</h2>
+        <h2 class="secondary-heading">Here are some of my <span class="highlight"> <strong>key</strong></span> projects:</h2>
         <div class="w-dyn-list">
           <div role="list" class="w-dyn-items">
             <div role="listitem" class="collection-item w-dyn-item">
@@ -377,9 +378,178 @@
         </div>
       </div>
     </aside>
-    <section class="section">
-      <div class="w-layout-blockcontainer container w-container"></div>
-    </section>
+
+    <aside class="section" id="All">
+      <h2 class="secondary-heading w-layout-blockcontainer container image-3">
+        Projects across disciplines <br> (section under construction)
+      </h2>
+
+      <!-- Filter Buttons -->
+      <div class="filter-container">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ux">UX/UI</button>
+        <button class="filter-btn" data-filter="code">Web/code</button>
+        <button class="filter-btn" data-filter="graphic">Graphic Design</button>
+        <button class="filter-btn" data-filter="3d">3D</button>
+        <button class="filter-btn" data-filter="video">Motion/video</button>
+        <button class="filter-btn" data-filter="playground">Playground</button>
+      </div>
+      <div class="w-layout-blockcontainer container image-3 w-container">
+
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card" data-categories="graphic code ux">
+          <img class="all-projects-image" src="images/Zettel/Thumbnail.png" alt="Project 1" />
+          <div class="project-info">
+            <h3>Zettel Notes Redesign</h3>
+            <p class="project-paragraph-preview">
+              A complete redesign of an e-commerce platform with improved user
+              experience.
+            </p>
+            <div class="project-categories">
+              <span class="category-tag">Graphic Design</span>
+              <span class="category-tag">Web</span>
+            </div>
+          </div>
+        </div>
+
+         <!-- Project 1 -->
+         <div class="project-card" data-categories="code">
+          <img class="all-projects-image" src="images/Danger/landing.png" alt="Project 1" />
+          <div class="project-info">
+            <h3>Danger - Concert Website</h3>
+            <p class="project-paragraph-preview">
+              This project was completed in my first year as an introduction to web design. 
+My task was to create a website for a musician that informed people about the artist, as well as allowed them to book tickets to an upcoming concert.
+            </p>
+            <div class="project-categories">
+              <span class="category-tag">Web</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 1 -->
+        <div class="project-card" data-categories="ux playground">
+          <img class="all-projects-image" src="images/Lumina/1.jpg" alt="Lumina" />
+          <div class="project-info">
+            <h3>Lumina - A Problem Solving Lamp</h3>
+            <p class="project-paragraph-preview">
+
+            </p>
+            <div class="project-categories">
+              <span class="category-tag">UX</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" data-categories="3d video">
+          <img class="all-projects-image" src="images/Trophy/Uj trophy post processed.jpg" alt="Project 2" />
+          <div class="project-info">
+            <h3>UJ Trophy Visualisation</h3>
+            <p>
+              Animated product showcase using 3D modeling and video editing.
+            </p>
+            <div class="project-categories">
+              <span class="category-tag">3D</span>
+              <span class="category-tag">Video</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <a href="https://hamzapatel.com/Projects/JS%20Game/" class="project-card" data-categories="code playground" target="_blank">
+          <img class="all-projects-image" src="images/JSGame.png" alt="Project 3" />
+          <div class="project-info">
+            <h3>JavaScript Game</h3>
+            <p>A browser-based game built while learning vanilla JavaScript.</p>
+            <div class="project-categories">
+              <span class="category-tag">Code</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Project 4 -->
+        <div class="project-card" data-categories="code">
+          <img lass="all-projects-image" src="/api/placeholder/600/400" alt="Project 4" />
+          <div class="project-info">
+            <h3>Arduino Smart Toy</h3>
+            <p>
+              User experience design for a fitness tracking mobile application.
+            </p>
+            <div class="project-categories">
+              <span class="category-tag">Code</span>
+              <span class="category-tag">research</span>
+              <span class="category-tag">physical computing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card" data-categories="graphic">
+          <img lass="all-projects-image" src="/api/placeholder/600/400" alt="Project 5" />
+          <div class="project-info">
+            <h3>STARLIGHT // Film Festival Branding Components</h3>
+            <p></p>
+            <div class="project-categories">
+              <span class="category-tag">graphic</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card" data-categories="video 3d">
+          <img lass="all-projects-image" src="images/Endless Engines thumbnail.png" alt="Project 6" />
+          <div class="project-info">
+            <h3>KNIGHT RIDER - ENDLESS ENGINES SUBMISSION</h3>
+            <p>Participated in the world's largest VFX competition</p>
+            <div class="project-categories">
+              <span class="category-tag">Video</span>
+              <span class="category-tag">3D</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="project-card" data-categories="video 3d">
+          <img lass="all-projects-image" src="/api/placeholder/600/400" alt="Project 6" />
+          <div class="project-info">
+            <h3>FNB logo animation</h3>
+            <p></p>
+            <div class="project-categories">
+              <span class="category-tag">Motion Graphics</span>
+              <span class="category-tag">3D</span>
+            </div>
+          </div>
+        </div>
+
+
+             <!-- Project 8 -->
+     <div class="project-card" data-categories="video 3d">
+      <img lass="all-projects-image" src="images/Endless Engines thumbnail.png" alt="Project 6" />
+      <div class="project-info">
+        <h3>Dodge Challenger 3D Motion Graphic</h3>
+        <p></p>
+        <div class="project-categories">
+          <span class="category-tag">Video</span>
+          <span class="category-tag">3D</span>
+        </div>
+      </div>
+    </div>
+
+
+      </div>
+    </div>
+
+
+    
+
+    </aside>
+
+    
+
     <section>
       <div class="w-layout-blockcontainer container w-container"></div>
     </section>

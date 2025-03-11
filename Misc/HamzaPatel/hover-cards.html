@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hover Cards</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .hover-container {
+        margin: 30px 0;
+      }
+
+      .hover-text {
+        display: inline-block;
+        cursor: pointer;
+        font-weight: bold;
+        color: #2c3e50;
+        padding: 5px;
+        border-bottom: 1px dashed #3498db;
+        position: relative;
+      }
+
+      .hover-text:hover {
+        background-color: #f0f8ff;
+      }
+
+      .hover-card {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        width: 300px;
+        background-color: white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        border-radius: 6px;
+        padding: 15px;
+        z-index: 100;
+        border-left: 4px solid #3498db;
+
+        /* Animation properties */
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+        transform: translateY(-10px);
+
+        /* This makes the card "transparent" to mouse events */
+        pointer-events: none;
+      }
+
+      .hover-text:hover .hover-card {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .card-title {
+        margin-top: 0;
+        color: #3498db;
+        font-size: 16px;
+        border-bottom: 1px solid #f1f1f1;
+        padding-bottom: 8px;
+      }
+
+      .card-content {
+        font-size: 14px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hover Card Example</h1>
+    <p>Hover over the highlighted text below to see different info cards:</p>
+
+    <div class="hover-container">
+      <span class="hover-text">
+        Learn about web development
+        <div class="hover-card">
+          <h3 class="card-title">Web Development</h3>
+          <div class="card-content">
+            <p>
+              Web development is the work involved in developing a website for
+              the Internet or an intranet. It includes aspects such as web
+              design, web publishing, web programming, and database management.
+            </p>
+          </div>
+        </div>
+      </span>
+    </div>
+
+    <div class="hover-container">
+      <span class="hover-text">
+        Discover modern CSS techniques
+        <div class="hover-card">
+          <h3 class="card-title">Modern CSS</h3>
+          <div class="card-content">
+            <p>
+              Modern CSS includes features like Flexbox, Grid, Custom
+              Properties, and Animation capabilities that make it easier to
+              create responsive and dynamic layouts without relying on
+              JavaScript.
+            </p>
+          </div>
+        </div>
+      </span>
+    </div>
+
+    <div class="hover-container">
+      <span class="hover-text">
+        Explore JavaScript frameworks
+        <div class="hover-card">
+          <h3 class="card-title">JavaScript Frameworks</h3>
+          <div class="card-content">
+            <p>
+              Popular JavaScript frameworks include React, Vue, Angular, and
+              Svelte. They provide structured approaches to building complex
+              user interfaces and single-page applications.
+            </p>
+          </div>
+        </div>
+      </span>
+    </div>
+  </body>
+</html>
