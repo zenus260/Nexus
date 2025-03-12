@@ -3608,7 +3608,7 @@ a {
   padding: 10px;
 }
 
-#More {
+#All {
   z-index: 10;
   width: 100%;
 }
@@ -3671,48 +3671,9 @@ a {
   background-color: #555;
 }
 
-/* Tooltip styles */
-.tooltip {
-  position: relative;
-}
-
-.tooltip .tooltip-text {
-  visibility: hidden;
-  width: 120px;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  border-radius: 4px;
-  padding: 5px;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -60px;
-  opacity: 0;
-  transition: opacity 0.3s;
-  font-size: 0.8rem;
-}
-
-.tooltip .tooltip-text::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #333 transparent transparent transparent;
-}
-
-.tooltip.show .tooltip-text {
-  visibility: visible;
-  opacity: 1;
-}
-
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat();
   gap: 1.5rem;
 }
