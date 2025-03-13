@@ -945,8 +945,7 @@ textarea.w-select {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.slider-handle::before,
-.slider-handle::after {
+.slider-handle::before{
   content: "";
   position: absolute;
   width: 10px;
@@ -955,11 +954,7 @@ textarea.w-select {
 }
 
 .slider-handle::before {
-  transform: rotate(45deg);
-}
-
-.slider-handle::after {
-  transform: rotate(-45deg);
+  transform: rotate(90deg);
 }
 
 .slider-labels {
@@ -3882,7 +3877,7 @@ a {
   display: flex;
   flex-direction: row;
   grid-gap: 15px;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 200px;
 }
