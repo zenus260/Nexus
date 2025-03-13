@@ -2741,6 +2741,14 @@ a {
   object-fit: contain;
   max-height: 90vh;
   width: unset;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-tall-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .image-3 {
@@ -3690,7 +3698,7 @@ a {
   border-radius: 8px;
 }
 
-/* Attempt 2 styles */
+/* Project filter */
 
 .filter-container {
   display: flex;
@@ -3865,6 +3873,75 @@ a {
 .fadeIn {
   animation: fadeIn 0.5s ease forwards;
 }
+
+/* Image grid section */
+
+.image-grid-section {
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
+  display: flex;
+  flex-direction: row;
+  grid-gap: 15px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 200px;
+}
+
+.image-item {
+  overflow: hidden;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 300px;
+}
+
+.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Modal/Lightbox */
+.modal {
+  display: none;
+  position: relative;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.9); */
+  padding: 20px;
+}
+
+.modal-content {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.modal-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.close {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 
 @media screen and (min-width: 1920px) {
   .section.footer {

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Image Grid</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container for the entire page */
+        .page-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Image grid container */
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            position: relative; /* Important for positioning the expanded image */
+        }
+
+        /* Individual image item */
+        .grid-item {
+            flex: 1 0 calc(25% - 10px); /* Create a 4-column grid by default */
+            min-width: 200px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 900px) {
+            .grid-item {
+                flex: 1 0 calc(33.333% - 10px); /* 3 columns on medium screens */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .grid-item {
+                flex: 1 0 calc(50% - 10px); /* 2 columns on small screens */
+            }
+        }
+
+        /* Image styling */
+        .grid-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            transition: transform 0.2s ease;
+        }
+
+        .grid-item:hover img {
+            transform: scale(1.03);
+        }
+
+        /* Modal overlay for expanded image */
+        .modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 10;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Expanded image container */
+        .expanded-image-container {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+
+        /* Expanded image */
+        .expanded-image {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        /* Close button for expanded image */
+        .close-button {
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            line-height: 30px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <h1>My Portfolio</h1>
+        
+        <p>This is some content before the image grid.</p>
+        
+        <!-- Image Grid Section -->
+        <div class="image-grid" id="imageGrid">
+            <!-- Sample grid items - replace src with your image paths -->
+            <div class="grid-item">
+                <img src="https://via.placeholder.com/400x300" alt="Project 1">
+            </div>
+            <div class="grid-item">
+                <img src="https://via.placeholder.com/400x300" alt="Project 2">
+            </div>
+            <div class="grid-item">
+                <img src="https://via.placeholder.com/400x300" alt="Project 3">
+            </div>
+            <div class="grid-item">
+                <img src="https://via.placeholder.com/400x300" alt="Project 4">
+            </div>
+            <div class="grid-item">
+                <img src="https://via.placeholder.com/400x300" alt="Project 5">
+            </div>
+            <div class="grid-item">
+                <img src="https://via.placeholder.com/400x300" alt="Project 6">
+            </div>
+            <div class="grid-item">
+                <img src="https://via.placeholder.com/400x300" alt="Project 7">
+            </div>
+            <div class="grid-item">
+                <img src="https://via.placeholder.com/400x300" alt="Project 8">
+            </div>
+            
+            <!-- Modal overlay for expanded image -->
+            <div class="modal-overlay" id="modalOverlay">
+                <div class="expanded-image-container">
+                    <img class="expanded-image" id="expandedImage" src="" alt="Expanded view">
+                    <button class="close-button" id="closeButton">×</button>
+                </div>
+            </div>
+        </div>
+        
+        <p>This is some content after the image grid.</p>
+    </div>
+
+    <script>
+        // Get all grid items
+        const gridItems = document.querySelectorAll('.grid-item');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const expandedImage = document.getElementById('expandedImage');
+        const closeButton = document.getElementById('closeButton');
+        const imageGrid = document.getElementById('imageGrid');
+        
+        // Add click event to each grid item
+        gridItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const img = this.querySelector('img');
+                expandedImage.src = img.src;
+                expandedImage.alt = img.alt;
+                modalOverlay.style.display = 'flex';
+            });
+        });
+        
+        // Close modal when close button is clicked
+        closeButton.addEventListener('click', function() {
+            modalOverlay.style.display = 'none';
+        });
+        
+        // Close modal when clicking outside the image
+        modalOverlay.addEventListener('click', function(e) {
+            if (e.target === modalOverlay) {
+                modalOverlay.style.display = 'none';
+            }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modalOverlay.style.display === 'flex') {
+                modalOverlay.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
