@@ -20,6 +20,8 @@
       rel="preconnect"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script
       src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
       type="text/javascript"
@@ -178,28 +180,20 @@
               <img src="images/Witcher/layout 3.JPG" alt="" class="image-2">
               <img src="images/Witcher/layout 4.JPG" alt="" class="image-2"> -->
               <img src="images/Witcher/processed.png" alt="" class="image-tall image-2">
-              <div class="image-grid-section">
+              <div class="image-grid-section glight-collection">
 
                
-                <div class="image-item">
-                    <img src="images/Witcher/layout 2.JPG" alt="Portfolio image 1">
-                </div>
-                <div class="image-item">
-                    <img src="images/Witcher/layout 3.JPG" alt="Portfolio image 2">
-                </div>
-                <div class="image-item">
-                  <img src="images/Witcher/layout 4.JPG" alt="Portfolio image 1">
-              </div>
-
-              
-
-              <!-- Modal/Lightbox -->
-            <div id="imageModal" class="modal">
-              <span class="close">&times;</span>
-              <div class="modal-content">
-                  <img class="modal-image" id="expandedImg">
-              </div>
-          </div>
+                <div class="image-grid-section glight-collection">
+                  <a href="images/Witcher/layout 2.JPG" class="image-item glightbox" data-gallery="gallery1">
+                      <img src="images/Witcher/layout 2.JPG" alt="Lumina prototyping 1">
+                  </a>
+                  
+                  <a href="images/Witcher/layout 3.JPG" class="image-item glightbox" data-gallery="gallery1">
+                     <img src="images/Witcher/layout 3.JPG" alt="Lumina prototyping 2">
+                  </a>
+                  <a href="images/Witcher/layout 4.JPG" class="image-item glightbox" data-gallery="gallery1">
+                    <img src="images/Witcher/layout 4.JPG" alt="Lumina prototyping 2">
+                 </a>
                 </div>
 
             </div>
@@ -345,5 +339,10 @@ const imageItems = document.querySelectorAll('.image-item');
                 modal.style.display = 'none';
             }
         });</script>
+            <script>
+              const lightbox = GLightbox({
+                  selector: '.glightbox' // Targets all elements with this class
+              });
+          </script>
   </body>
 </html>

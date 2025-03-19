@@ -3798,7 +3798,7 @@ a {
   grid-gap: 15px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 .image-item {
@@ -3818,6 +3818,8 @@ a {
 .image-item:hover img {
   transform: scale(1.05);
 }
+
+
 
 /* Modal/Lightbox */
 .modal {

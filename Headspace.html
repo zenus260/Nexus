@@ -20,6 +20,8 @@
       rel="preconnect"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script
       src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
       type="text/javascript"
@@ -209,6 +211,67 @@
           {
             title: "Ideation",
             imageRange: { start: 21, end: 35 },
+            customDividers: [
+        {
+          afterImage: 35, // Insert after image #16
+          content: `
+
+          <div class="accordion">
+              <button class="accordion-header">Task models</button>
+              <div class="accordion-content about-info">
+                  <div class="image-grid-section glight-collection">
+                    <a href="images/Headspace/taskmodels/1.jpg" class="image-item glightbox" data-gallery="gallery1">
+                        <img src="images/Headspace/taskmodels/1.jpg" alt="Lumina prototyping 1">
+                    </a>
+                    <a href="images/Headspace/taskmodels/2.jpg" class="image-item glightbox" data-gallery="gallery1">
+                      <img src="images/Headspace/taskmodels/2.jpg" alt="Lumina prototyping 1">
+                    </a>
+                    <a href="images/Headspace/taskmodels/3.jpg" class="image-item glightbox" data-gallery="gallery1">
+                    <img src="images/Headspace/taskmodels/3.jpg" alt="Lumina prototyping 1">
+                    </a>
+                    <a href="images/Headspace/taskmodels/4.jpg" class="image-item glightbox" data-gallery="gallery1">
+                    <img src="images/Headspace/taskmodels/4.jpg" alt="Lumina prototyping 1">
+                    </a>
+                    <a href="images/Headspace/taskmodels/5.jpg" class="image-item glightbox" data-gallery="gallery1">
+                      <img src="images/Headspace/taskmodels/5.jpg" alt="Lumina prototyping 1">
+                    </a>
+                    <a href="images/Headspace/taskmodels/6.jpg" class="image-item glightbox" data-gallery="gallery1">
+                      <img src="images/Headspace/taskmodels/6.jpg" alt="Lumina prototyping 1">
+                    </a>
+                    <a href="images/Headspace/taskmodels/7.jpg" class="image-item glightbox" data-gallery="gallery1">
+                    <img src="images/Headspace/taskmodels/7.jpg" alt="Lumina prototyping 1">
+                    </a>
+                    <a href="images/Headspace/taskmodels/8.jpg" class="image-item glightbox" data-gallery="gallery1">
+                      <img src="images/Headspace/taskmodels/8.jpg" alt="Lumina prototyping 1">
+                    </a>
+                    <a href="images/Headspace/taskmodels/9.jpg" class="image-item glightbox" data-gallery="gallery1">
+                    <img src="images/Headspace/taskmodels/9.jpg" alt="Lumina prototyping 1">
+                    </a>
+                    <a href="images/Headspace/taskmodels/10.jpg" class="image-item glightbox" data-gallery="gallery1">
+                      <img src="images/Headspace/taskmodels/10.jpg" alt="Lumina prototyping 1">
+                    </a>
+                    <a href="images/Headspace/taskmodels/11.jpg" class="image-item glightbox" data-gallery="gallery1">
+                    <img src="images/Headspace/taskmodels/11.jpg" alt="Lumina prototyping 1">
+                    </a>
+                    <a href="images/Headspace/taskmodels/12.jpg" class="image-item glightbox" data-gallery="gallery1">
+                      <img src="images/Headspace/taskmodels/12.jpg" alt="Lumina prototyping 1">
+                    </a>
+                    <a href="images/Headspace/taskmodels/14.jpg" class="image-item glightbox" data-gallery="gallery1">
+                    <img src="images/Headspace/taskmodels/14.jpg" alt="Lumina prototyping 1">
+                    </a>
+                    <a href="images/Headspace/taskmodels/16.jpg" class="image-item glightbox" data-gallery="gallery1">
+                    <img src="images/Headspace/taskmodels/16.jpg" alt="Lumina prototyping 1">
+                    </a>
+                    <a href="images/Headspace/taskmodels/17.jpg" class="image-item glightbox" data-gallery="gallery1">
+                    <img src="images/Headspace/taskmodels/17.jpg" alt="Lumina prototyping 1">
+                    </a>
+    </div>
+    
+              </div>
+            </div>
+          `
+        }
+      ]
           },
           {
             title: "Prototyping",
@@ -226,99 +289,114 @@
       };
 
       function range(start, end) {
-        return Array.from({ length: end - start + 1 }, (_, i) => start + i);
-      }
+  return Array.from({ length: end - start + 1 }, (_, i) => start + i);
+}
 
-      function generateContent() {
-        const outliner = document.querySelector(".outliner");
-        const content = document.querySelector(".content");
+function generateContent() {
+  const outliner = document.querySelector(".outliner");
+  const content = document.querySelector(".content");
 
-        projectData.sections.forEach((section, index) => {
-          // Add navigation link
-          const link = document.createElement("a");
-          link.href = `#section-${index}`;
-          link.textContent = section.title;
-          link.dataset.section = `section-${index}`;
-          outliner.appendChild(link);
+  projectData.sections.forEach((section, index) => {
+    // Add navigation link
+    const link = document.createElement("a");
+    link.href = `#section-${index}`;
+    link.textContent = section.title;
+    link.dataset.section = `section-${index}`;
+    outliner.appendChild(link);
 
-          // Add section content
-          const sectionDiv = document.createElement("div");
-          sectionDiv.className = "section";
-          sectionDiv.id = `section-${index}`;
+    // Add section content
+    const sectionDiv = document.createElement("div");
+    sectionDiv.className = "section";
+    sectionDiv.id = `section-${index}`;
 
-          const heading = document.createElement("h1");
-          heading.textContent = section.title;
-          sectionDiv.appendChild(heading);
-          heading.className = "applesauce"
+    const heading = document.createElement("h1");
+    heading.textContent = section.title;
+    sectionDiv.appendChild(heading);
+    heading.className = "applesauce";
 
-          const imageNumbers = range(
-            section.imageRange.start,
-            section.imageRange.end
-          );
+    const imageNumbers = range(
+      section.imageRange.start,
+      section.imageRange.end
+    );
 
-          imageNumbers.forEach((num) => {
-            const imageContainer = document.createElement("div");
-            imageContainer.className = "image-container";
-
-            const img = document.createElement("img");
-            img.src = `${projectData.imagePath}${num}${projectData.imageExtension}`;
-            img.alt = `Image ${num} from ${section.title}`;
-            img.className = projectData.imageClass;
-
-            img.onerror = function () {
-              console.warn(`Failed to load image ${num}`);
-              imageContainer.remove();
-            };
-
-            imageContainer.appendChild(img);
-            sectionDiv.appendChild(imageContainer);
-          });
-
-          content.appendChild(sectionDiv);
-        });
-
-        // Set up intersection observer for sections
-        const observerOptions = {
-          root: null, // use viewport
-          rootMargin: "-50% 0px", // trigger when section is halfway through viewport
-          threshold: 0,
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            const id = entry.target.id;
-            const link = outliner.querySelector(`[data-section="${id}"]`);
-
-            if (entry.isIntersecting) {
-              // Remove active class from all links
-              outliner
-                .querySelectorAll("a")
-                .forEach((a) => a.classList.remove("active"));
-              // Add active class to current section's link
-              link.classList.add("active");
-            }
-          });
-        }, observerOptions);
-
-        // Observe all sections
-        document.querySelectorAll(".section").forEach((section) => {
-          observer.observe(section);
-        });
-      }
-
-      // Initialize the page
-      generateContent();
-
-      // Smooth scroll behavior
-      document.querySelectorAll(".outliner a").forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const sectionId = this.getAttribute("href");
-          document.querySelector(sectionId).scrollIntoView({
-            behavior: "smooth",
-          });
-        });
+    // Create map of custom dividers for quick lookup
+    const dividerMap = {};
+    if (section.customDividers) {
+      section.customDividers.forEach(divider => {
+        dividerMap[divider.afterImage] = divider.content;
       });
+    }
+
+    imageNumbers.forEach((num) => {
+      const imageContainer = document.createElement("div");
+      imageContainer.className = "image-container";
+
+      const img = document.createElement("img");
+      img.src = `${projectData.imagePath}${num}${projectData.imageExtension}`;
+      img.alt = `Image ${num} from ${section.title}`;
+      img.className = projectData.imageClass;
+
+      img.onerror = function () {
+        console.warn(`Failed to load image ${num}`);
+        imageContainer.remove();
+      };
+
+      imageContainer.appendChild(img);
+      sectionDiv.appendChild(imageContainer);
+      
+      // Insert custom divider after this image if specified
+      if (dividerMap[num]) {
+        const dividerContainer = document.createElement("div");
+        dividerContainer.innerHTML = dividerMap[num];
+        sectionDiv.appendChild(dividerContainer);
+      }
+    });
+
+    content.appendChild(sectionDiv);
+  });
+
+  // Set up intersection observer for sections
+  const observerOptions = {
+    root: null, // use viewport
+    rootMargin: "-50% 0px", // trigger when section is halfway through viewport
+    threshold: 0,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const id = entry.target.id;
+      const link = outliner.querySelector(`[data-section="${id}"]`);
+
+      if (entry.isIntersecting) {
+        // Remove active class from all links
+        outliner
+          .querySelectorAll("a")
+          .forEach((a) => a.classList.remove("active"));
+        // Add active class to current section's link
+        link.classList.add("active");
+      }
+    });
+  }, observerOptions);
+
+  // Observe all sections
+  document.querySelectorAll(".section").forEach((section) => {
+    observer.observe(section);
+  });
+}
+
+// Initialize the page
+generateContent();
+
+// Smooth scroll behavior
+document.querySelectorAll(".outliner a").forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const sectionId = this.getAttribute("href");
+    document.querySelector(sectionId).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
           </script>
 
             
@@ -400,5 +478,10 @@
     
     <script src="js/jquery.js" type="text/javascript"></script>
     <script src="js/webflow-script.js" type="text/javascript"></script>
+    <script>
+      const lightbox = GLightbox({
+          selector: '.glightbox' // Targets all elements with this class
+      });
+  </script>
   </body>
 </html>
