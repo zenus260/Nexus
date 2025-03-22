@@ -12,8 +12,8 @@
     <meta content="About" property="og:title" />
     <meta content="About" property="twitter:title" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="Webflow" name="generator" />
-    <link href="css/webflow-style.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link
       href="https://fonts.gstatic.com"
@@ -85,9 +85,8 @@
       </div>
     </div>
 
-
-
-    <div class="outliner-sticky">
+    <button class="toggle-btn" id="toggleSidebar">Index</button>
+    <aside class="outliner-sticky" id="outlinersticky">
       <div class="outliner" id="outline">
         <div class="outliner">
           <h3>Index</h3>
@@ -95,7 +94,7 @@
         </div>
       </div>
 
-    </div>
+    </aside>
 
     
 
@@ -458,7 +457,7 @@ document.querySelectorAll(".outliner a").forEach((anchor) => {
   </section>
     
     <script src="js/jquery.js" type="text/javascript"></script>
-    <script src="js/webflow-script.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
                   const container = document.querySelector('.slider-container');
