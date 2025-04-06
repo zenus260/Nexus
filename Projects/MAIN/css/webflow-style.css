@@ -2176,6 +2176,7 @@ textarea.w-select {
 :root {
   --brand-blue: #01295f;
   --marzipan: #f7da96;
+  color-scheme: light;
 }
 
 .w-layout-vflex {
@@ -2496,11 +2497,12 @@ textarea.w-select {
     url("../assets/hero_image.png");
   background-position: 0 0, 50% 0;
   background-repeat: repeat, no-repeat;
-  background-size: auto, auto;
+  /* background-size: cover; */
+  /* background-size: 180vh; */
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding-top: 60px;
+  /* padding-top: 60px; */
   padding-bottom: 60px;
   display: flex;
 }
