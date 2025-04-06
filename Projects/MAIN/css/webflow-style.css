@@ -2494,7 +2494,7 @@ textarea.w-select {
 
 .hero {
   background-image: linear-gradient(#fff0 72%, #ffffffad 83%, #fff 93%),
-    url("../assets/hero_image.png");
+    url("../assets/hero_image.jpg");
   background-position: 0 0, 50% 0;
   background-repeat: repeat, no-repeat;
   /* background-size: cover; */
