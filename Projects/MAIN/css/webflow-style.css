@@ -2496,7 +2496,7 @@ textarea.w-select {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding-top: 90px;
+  /* padding-top: 90px; */
   /* padding-bottom: 60px; */
   display: flex;
   flex-direction: column;
@@ -2887,7 +2887,7 @@ textarea.w-select {
     line-height: 1;
   }
 
-  .div-block {
+  .hero-block {
     max-width: 90%;
     padding-top: 10px;
     padding-bottom: 10px;
